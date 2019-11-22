@@ -1,2 +1,3 @@
 org.springframework.context.ApplicationListener=\
-com.example.demo.demo2.runtest.GlmapperApplicationStartingEventListener
+com.example.demo.demo2.runtest.GlmapperApplicationStartingEventListener,\
+com.example.demo.demo2.runtest.GlmapperApplicationReadyEvent
