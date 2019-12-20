@@ -1,5 +1,6 @@
 package com.example.demo.demo2.excel;
 
+import com.example.demo.demo1.entity.Car;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -15,10 +16,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Excelrw {
 
@@ -141,10 +139,12 @@ public class Excelrw {
     }
 
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<>();
-        list.add("吉祥");
-        list.add("羊羊羊");
-        list.add("琳琅满目");
-        createExcel(list);
+//        ArrayList<String> list = new ArrayList<>();
+//        list.add("吉祥");
+//        list.add("羊羊羊");
+//        list.add("琳琅满目");
+//        createExcel(list);
+
+
     }
 }

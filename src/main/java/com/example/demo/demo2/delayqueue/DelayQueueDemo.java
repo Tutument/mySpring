@@ -8,6 +8,9 @@ import java.util.concurrent.DelayQueue;
 import java.util.concurrent.Delayed;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * java 延时队列
+ */
 public class DelayQueueDemo {
     static class Cache implements Runnable {
 
