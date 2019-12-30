@@ -156,9 +156,19 @@ public class myTest {
         //btwTime();
         //dotoInt();
 
-        HashMap<String, String> map = new HashMap<>();
-        String s = map.get("1");
-        System.out.println(s);
+//        HashMap<String, String> map = new HashMap<>();
+//        String s = map.get("1");
+//        System.out.println(s);
+
+        find();
+
+        //randomUtil();
+
+        //randDo();
+
+        //randDemo();
+
+        //Num();
     }
 
     public static int daysBetween(Date date1,Date date2){
@@ -210,5 +220,96 @@ public class myTest {
         Double a = 0.21;
         int i = a.intValue();
         System.out.println(i);
+    }
+
+    public static void find(){
+
+        //UUID uuid = UUID.randomUUID();
+        //System.out.println(uuid);
+
+
+
+        for(int i=0;i<2;i++){
+            try {
+                Thread.sleep(2);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            Long millis = System.currentTimeMillis();
+            String string = millis.toString();
+            String substring = string.substring(4);
+            long l = Long.parseLong(substring);
+            //System.out.println(l/(1000*60*60*24));
+            System.out.println("X"+substring);
+            //System.out.println(989366637/(1000*60*60*24));
+        }
+
+    }
+
+    public static void randomUtil(){
+        Random r = new Random();
+        String code = "";
+        for (int i = 0; i < 4; ++i) {
+            int temp = r.nextInt(52);
+            char x = (char) (temp < 26 ? temp + 97 : (temp % 26) + 65);
+            code += x;
+        }
+
+        System.out.println(code);
+
+    }
+
+    public static void randDo(){
+
+        for(int i=0;i<4000;i++){
+            UUID uuid = UUID.randomUUID();
+            String string = uuid.toString();
+            String substring = string.substring(0, 7);
+            Random r = new Random();
+            int temp = r.nextInt(26);
+            char x = (char)(temp+97);
+            System.out.println(substring+x);
+        }
+
+    }
+
+    public static void randDemo(){
+        UUID uuid = UUID.randomUUID();
+
+
+        System.out.println(uuid);
+    }
+
+    public static int Num() {
+        int[] array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        Random rand = new Random();
+        for (int i = 10; i > 1; i--) {
+            int index = rand.nextInt(i);
+            int tmp = array[index];
+            array[index] = array[i - 1];
+            array[i - 1] = tmp;
+        }
+        int result = 0;
+        for (int i = 0; i < 6; i++) {
+            result = result * 10 + array[i];
+        }
+        if (String.valueOf(result).length() == 6) {
+            return result;
+        } else {
+            return Num();
+        }
+    }
+
+    public static void just(){
+        //生成一千个随机六位数
+        for (int i = 0; i < 1000; i++) {
+            int num = (int) ((Math.random() * 9 + 1) * 100000);
+            System.out.println("随机生成的六位数：" + num);
+            String num_str = String.valueOf(num);
+            //验证是否会生成五位数，或者首位是0的数
+            if (num_str.length() == 5) {
+                System.out.println("生成的五位数：" + num);
+            }
+        }
     }
 }
